@@ -4,12 +4,12 @@
 <h1>Testing {name}</h1>
 <button on:click={handleClick}>Click me : {count}</button>
 
-<div>
-    <h1 class="titulo">testing calculator</h1>
+<div class="app-calculadora">
+    <h1 class="titulo">Calculadora</h1>
 <!-- lo mismo pero empezando desde la posicion 1 -->
 
 <div class="caja">
-    <h2>Line :  {calcline.slice(1).join(' ')}</h2>
+    <h2>Calculo :  {calcline.slice(1).join(' ')}</h2>
     <h1> Resultado: {result} </h1>
     <h4> Expression: {used_expression} </h4>
 </div>
@@ -111,10 +111,19 @@ $: if (count >= 10){
 </script>
 
 <style>
-h1 {
-  color: red;
-  font-family: 'Comic Sans MS', cursive;
-  font-size: 1em;
+/* estilo app */
+.app-calculadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* estilo titulo */
+.titulo {
+  text-align: center;
+  color: #0A66C2;
 }
 /* estilo caja */
 
