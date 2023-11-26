@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
-
+const sveltePreprocess = require('svelte-preprocess');
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -8,6 +8,10 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
 	}
+};
+
+module.exports = {
+  preprocess: sveltePreprocess(),
 };
 
 export default config;
