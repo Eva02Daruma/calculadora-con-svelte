@@ -4,11 +4,16 @@
 <h1>Testing {name}</h1>
 <button on:click={handleClick}>Click me : {count}</button>
 
-<h1>testing calculator</h1>
+<div>
+    <h1 class="titulo">testing calculator</h1>
 <!-- lo mismo pero empezando desde la posicion 1 -->
-<h3>Line :  {calcline.slice(1).join(' ')}</h3>
-<h3> Resultado: {result} </h3>
-<h3> Expression: {used_expression} </h3>
+
+<div class="caja">
+    <h2>Line :  {calcline.slice(1).join(' ')}</h2>
+    <h1> Resultado: {result} </h1>
+    <h4> Expression: {used_expression} </h4>
+</div>
+
 
 <div class="calculadora">
     <div>
@@ -39,6 +44,9 @@
       </div>
       <button on:click={calculateResult}>Calcular</button>
 </div>
+
+</div>
+
 
 <script> 
 let name = 'world';
@@ -106,8 +114,54 @@ $: if (count >= 10){
 h1 {
   color: red;
   font-family: 'Comic Sans MS', cursive;
-  font-size: 2em;
+  font-size: 1em;
+}
+/* estilo caja */
+
+
+ /* estilo calculadora */
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
+.calculadora button {
+    /* https://getcssscan.com/css-buttons-examples */
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.calculadora button:hover {
+    background-color: #16437E;
+    color: #ffffff;
+}
 
 </style>
