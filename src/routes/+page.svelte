@@ -2,9 +2,9 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <h1>Testing {name}</h1>
-<button on:click={handleClick}>Click me : {count}</button>
+<button class="btn btn-primary " on:click={handleClick}>Click me : {count}</button>
 
-<div class="app-calculadora">
+<div class="container py-4 px-3 mx-auto">
     <h1 class="titulo">Calculadora</h1>
 <!-- lo mismo pero empezando desde la posicion 1 -->
 
@@ -13,6 +13,7 @@
     <h1> Resultado: {result} </h1>
     <h4> Expression: {used_expression} </h4>
 </div>
+
 
 
 <div class="calculadora">
@@ -111,15 +112,6 @@ $: if (count >= 10){
 </script>
 
 <style>
-/* estilo app */
-.app-calculadora {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 /* estilo titulo */
 .titulo {
   text-align: center;
